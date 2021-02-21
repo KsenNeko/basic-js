@@ -5,7 +5,7 @@ const HALF_LIFE_PERIOD= 5730;
 
 module.exports = function dateSample(/* sampleActivity */) {
    let a = Number(sampleActivity);
-    if (isNan(a)) {
+    if (isNaN(a)) {
         return false;
     }
     if (a<=0 || a>= MODERN_ACTIVITY){
