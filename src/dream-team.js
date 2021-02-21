@@ -10,6 +10,6 @@ module.exports = function createDreamTeam(members) {
         }
     }
     if (res === '')  return false;
-    res = res.split('').sort().join('').toUpperCase();
+    res = res.toUpperCase().split('').sort().join('');
     return res;
 };
