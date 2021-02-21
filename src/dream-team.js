@@ -1,7 +1,7 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function createDreamTeam(members) {
-  if(typeof members !== 'array') return false;
+  if(!Array.isArray(members)) return false;
     res = '';
     for(human in members) {
         members[human] = members[human].replace(/\s+/g, '');
