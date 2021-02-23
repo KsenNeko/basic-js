@@ -24,6 +24,8 @@ module.exports = function transform(arr) {
             res.push(arr[i - 1]);
           }
           break;
+        default:
+          res.push(arr[i]);
       }
     } else {
       res.push(arr[i]);
