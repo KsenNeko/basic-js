@@ -20,7 +20,7 @@ module.exports = function transform(arr) {
           }
           break;
         case "--double-prev":
-          if (i > 0) {
+          if (i > 0 && res[res.length - 1]===arr[i-1]) {
             res.push(arr[i - 1]);
           }
           break;
