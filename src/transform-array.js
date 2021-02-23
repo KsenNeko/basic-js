@@ -10,7 +10,7 @@ module.exports = function transform(arr) {
           i++;
           break;
         case "--discard-prev":
-          if (i > 0 && res[res.length - 1]===arr[i-1]){
+          if if (i > 0 && (res[res.length - 1] === arr[i-1] || (isNaN(arr[i-1]) && isNaN(res[res.length - 1])))){
             res.splice(res.length - 1, 1);
           }
           break;
@@ -20,7 +20,7 @@ module.exports = function transform(arr) {
           }
           break;
         case "--double-prev":
-          if (i > 0 && res[res.length - 1]===arr[i-1]) {
+          if if (i > 0 && (res[res.length - 1] === arr[i-1] || (isNaN(arr[i-1]) && isNaN(res[res.length - 1])))) {
             res.push(arr[i - 1]);
           }
           break;
