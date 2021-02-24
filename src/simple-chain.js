@@ -11,7 +11,10 @@ const chainMaker = {
   },
   removeLink(position) {
     if (position > this.links.length || position <= 0 || position !== parseInt(position, 10))
-      throw Error;
+      {
+       this.links = [];
+       throw Error;
+     } 
     this.links.splice(position-1, 1);
       return this;
   },
@@ -31,6 +34,7 @@ const chainMaker = {
       str = `${str}~~( ${this.links[k]} )`;
       }
     }
+    this.links = [];
     return str;
   },
 };
